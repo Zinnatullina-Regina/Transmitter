@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{362E8FE6-2699-4315-ABD4-FD43671AF867}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Transmitter</RootNamespace>
+    <AssemblyName>Transmitter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\FileDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shell\FileDialogForm.Designer.cs">
+      <DependentUpon>FileDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\FileDialogToolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shell\FileDialogToolbar.Designer.cs">
+      <DependentUpon>FileDialogToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\FileFilterComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\FileNameComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\FilterItem.cs" />
+    <Compile Include="Shell\Interop\BHID.cs" />
+    <Compile Include="Shell\Interop\CoClass.cs" />
+    <Compile Include="Shell\Interop\ComCtl32.cs" />
+    <Compile Include="Shell\Interop\HResult.cs" />
+    <Compile Include="Shell\Interop\ICommDlgBrowser.cs" />
+    <Compile Include="Shell\Interop\IContextMenu.cs" />
+    <Compile Include="Shell\Interop\IDropSource.cs" />
+    <Compile Include="Shell\Interop\IDropTarget.cs" />
+    <Compile Include="Shell\Interop\IEnumIDList.cs" />
+    <Compile Include="Shell\Interop\IFileDialog.cs" />
+    <Compile Include="Shell\Interop\IKnownFolder.cs" />
+    <Compile Include="Shell\Interop\IKnownFolderManager.cs" />
+    <Compile Include="Shell\Interop\IOleCommandTarget.cs" />
+    <Compile Include="Shell\Interop\IQueryInfo.cs" />
+    <Compile Include="Shell\Interop\IServiceProvider.cs" />
+    <Compile Include="Shell\Interop\IShellBrowser.cs" />
+    <Compile Include="Shell\Interop\IShellFolder.cs" />
+    <Compile Include="Shell\Interop\IShellItem.cs" />
+    <Compile Include="Shell\Interop\IShellItemArray.cs" />
+    <Compile Include="Shell\Interop\IShellView.cs" />
+    <Compile Include="Shell\Interop\Kernel32.cs" />
+    <Compile Include="Shell\Interop\Ole32.cs" />
+    <Compile Include="Shell\Interop\Shell32.cs" />
+    <Compile Include="Shell\Interop\ShlWapi.cs" />
+    <Compile Include="Shell\Interop\User32.cs" />
+    <Compile Include="Shell\Interop\VistaBridge\ShellItemImpl.cs" />
+    <Compile Include="Shell\KnownFolderManager.cs" />
+    <Compile Include="Shell\obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="Shell\obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="Shell\PlacesToolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Shell\PlacesToolbar.Designer.cs">
+      <DependentUpon>PlacesToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\Properties\AssemblyInfo.cs" />
+    <Compile Include="Shell\Properties\Resources.Designer.cs" />
+    <Compile Include="Shell\ShellBrowser.cs" />
+    <Compile Include="Shell\ShellComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellContextMenu.cs" />
+    <Compile Include="Shell\ShellHistory.cs" />
+    <Compile Include="Shell\ShellItem.cs" />
+    <Compile Include="Shell\ShellItemBrowseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellItemBrowseForm.Designer.cs">
+      <DependentUpon>ShellItemBrowseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\ShellItemEditor.cs" />
+    <Compile Include="Shell\ShellNotificationListener.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\ShellView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Shell\SystemImageList.cs" />
+    <Compile Include="TransmitterProg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransmitterProg.Designer.cs">
+      <DependentUpon>TransmitterProg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell\FileDialogForm.resx">
+      <DependentUpon>FileDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell\FileDialogToolbar.resx">
+      <DependentUpon>FileDialogToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell\obj\Debug\GongSolutions.Shell.FileDialogToolbar.resources" />
+    <EmbeddedResource Include="Shell\obj\Debug\GongSolutions.Shell.PlacesToolbar.resources" />
+    <EmbeddedResource Include="Shell\obj\Debug\GongSolutions.Shell.Properties.Resources.resources" />
+    <EmbeddedResource Include="Shell\obj\Debug\GongSolutions.Shell.ShellItemBrowseForm.resources" />
+    <EmbeddedResource Include="Shell\PlacesToolbar.resx">
+      <DependentUpon>PlacesToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shell\Properties\Resources.resx" />
+    <EmbeddedResource Include="Shell\ShellItemBrowseForm.resx">
+      <DependentUpon>ShellItemBrowseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransmitterProg.resx">
+      <DependentUpon>TransmitterProg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Shell\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Shell\obj\Debug\Shell.csproj.AssemblyReference.cache" />
+    <None Include="Shell\obj\Debug\Shell.csproj.CoreCompileInputs.cache" />
+    <None Include="Shell\obj\Debug\Shell.csproj.GenerateResource.cache" />
+    <None Include="Shell\Shell.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coding_computer_pc_screen_code_icon_193925.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders_folder_file_icon_219509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_menu_checklist_list_clipboard_icon_208206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage_trash_bin_delete_icon_219529.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code_file_coding_paper_archive_document_icon_219535.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_file_image_photo_gallery_icon_219527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive_papers_library_files_icon_219520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_support_22593.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-80_icon-icons.com_57340 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit-80_icon-icons.com_57325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squareroundedemptyoutlinedbuttonshape_80680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_icon_220002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_minimize_icon_144028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62843dd1-43f7-4796-a7d5-5f6543af5138.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shell\bin\Debug\GongShell.dll" />
+    <Content Include="Shell\bin\Debug\GongShell.pdb" />
+    <Content Include="Shell\bin\Debug\GongShell.XML" />
+    <Content Include="Shell\obj\Debug\GongShell.dll" />
+    <Content Include="Shell\obj\Debug\GongShell.pdb" />
+    <Content Include="Shell\obj\Debug\Shell.csproj.FileListAbsolute.txt" />
+    <Content Include="Shell\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Shell\Resources\Back.bmp" />
+    <Content Include="Shell\Resources\Forward.bmp" />
+    <Content Include="Shell\Resources\NewFolder.bmp" />
+    <Content Include="Shell\Resources\Up.bmp" />
+    <Content Include="Shell\Resources\Views.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Shell\bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shell\Shell.csproj">
+      <Project>{711CCF1F-6B8F-4E97-8D84-0EE679C83B41}</Project>
+      <Name>Shell</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
