@@ -207,8 +207,7 @@ namespace Transmitter
             Exit.Location = new Point(PressF - 47, 15);
             Max.Location = new Point(PressF - 95, 15);
             pictureBox5.Location = new Point(PressF - 59, 4);
-            Open.Location = new Point(PressF - 150, 6);
-            search.Width = PressF - 350;
+           
         }
 
         private void Open_Click(object sender, EventArgs e)
