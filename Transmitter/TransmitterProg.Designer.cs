@@ -124,9 +124,9 @@ namespace Transmitter
             this.Naming.AutoSize = true;
             this.Naming.Location = new System.Drawing.Point(111, 15);
             this.Naming.Name = "Naming";
-            this.Naming.Size = new System.Drawing.Size(72, 17);
+            this.Naming.Size = new System.Drawing.Size(80, 17);
             this.Naming.TabIndex = 10;
-            this.Naming.Text = "Поводник";
+            this.Naming.Text = "Проводник";
             // 
             // label1
             // 
@@ -183,7 +183,7 @@ namespace Transmitter
             this.справкаToolStripMenuItem1});
             this.справкаToolStripMenuItem.Image = global::Transmitter.Properties.Resources.Вопрос;
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // оПрограммеToolStripMenuItem
@@ -206,7 +206,7 @@ namespace Transmitter
             // 
             this.закрытьToolStripMenuItem.Image = global::Transmitter.Properties.Resources.Close;
             this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
-            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.закрытьToolStripMenuItem.Text = "Закрыть";
             this.закрытьToolStripMenuItem.Click += new System.EventHandler(this.закрытьToolStripMenuItem_Click);
             // 
